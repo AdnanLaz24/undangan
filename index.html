@@ -134,7 +134,7 @@
                             <div class="swiper-slide">
                                 <img src="gambar/DSC08793.jpg" alt="foto pengantin pria 2" loading="lazy">
                             </div>
-                             <div class="swiper-slide">
+                            <div class="swiper-slide">
                                 <img src="gambar/pria.jpg" alt="foto pengantin pria 1" loading="lazy">
                             </div>
                         </div>
@@ -287,10 +287,9 @@
                                 <img src="https://i0.wp.com/umsu.ac.id/berita/wp-content/uploads/2024/05/cara-daftar-rekening-bank-bca-dengan-mudah-dan-cepat-2024.jpg?fit=720%2C405&ssl=1"
                                     alt="" style="max-width: 100px; max-height: 20px;">
                                 <p>Bank BCA</p>
-                                <p>No. Rekening 6821287836</p>
+                                <p>No. Rekening xxxxxxxxx</p>
                                 <p>a.n <b>Safitriyah</b></p>
-                                <button
-                                    onclick="copyToClipboard('6821287836', 'Nomor rekening berhasil disalin!')">Salin
+                                <button onclick="copyToClipboard('xxxxxxxx', 'Nomor rekening berhasil disalin!')">Salin
                                     Nomor Rekening BCA</button>
                             </div>
                             <div class="column right">
@@ -300,7 +299,7 @@
                                 <p>Alamat kirim kado</p>
                                 <p>a.n <b>Safitriyah</b></p>
                                 <button
-                                    onclick="copyToClipboard('Jl.R.Kosasih RT002/RW012 No 39 Cikaret Bogor Selatan (dibelakang sd kotabatu 8 dekat masjid al-mutmainah)', 'Alamat pengiriman berhasil disalin!')">Salin
+                                    onclick="copyToClipboard('xxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'Alamat pengiriman berhasil disalin!')">Salin
                                     Alamat
                                     Pengiriman</button>
                             </div>
@@ -393,63 +392,63 @@
         Browser Anda tidak mendukung audio tag.
     </audio>
     <script>
-   window.onload = function() {
-    var swiper = new Swiper('.swiper-containerWanita', {
-        direction: 'horizontal',
-        loop: true, 
-        speed: 3000, 
-        autoplay: {
-            delay: 2000, 
-            disableOnInteraction: false,
-        },
-        observer: true,
-        observeParents: true,
-        touchEventsTarget: 'container',
-    });
+        window.onload = function () {
+            var swiper = new Swiper('.swiper-containerWanita', {
+                direction: 'horizontal',
+                loop: true,
+                speed: 3000,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                observer: true,
+                observeParents: true,
+                touchEventsTarget: 'container',
+            });
 
-    var swiper1 = new Swiper('.swiper-containerPria', {
-        direction: 'horizontal',
-        loop: true, 
-        speed: 3000, 
-        autoplay: {
-            delay: 2000, 
-            disableOnInteraction: false,
-            reverseDirection: true,
-        },
-        observer: true,
-        observeParents: true,
-        touchEventsTarget: 'container',
-    });
-    
-    var swiper2 = new Swiper('.swiper-container3', {
-            direction: 'vertical', // Mengubah arah swipe menjadi vertikal (ke atas dan ke bawah)
-            loop: true, // Membuat swiper loop secara terus-menerus
-            speed: 3000, // Waktu transisi antara slide dalam milidetik (3 detik)
-            autoplay: {
-                delay: 2000, // Waktu antar swipe otomatis (4 detik)
-                disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
-                reverseDirection: true,
-            },
-        });
-        var swiper3 = new Swiper('.swiper-container6', {
-            direction: 'vertical', // Mengubah arah swipe menjadi vertikal
-            loop: true, // Membuat swiper loop secara terus-menerus
-            speed: 3000, // Mengurangi waktu transisi antara slide (1 detik)
-            autoplay: {
-                delay: 2000, // Mengurangi waktu antar swipe otomatis (3 detik)
-                disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
-                reverseDirection: false,
-            },
-        });
+            var swiper1 = new Swiper('.swiper-containerPria', {
+                direction: 'horizontal',
+                loop: true,
+                speed: 3000,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    reverseDirection: true,
+                },
+                observer: true,
+                observeParents: true,
+                touchEventsTarget: 'container',
+            });
 
-    // Update Swiper when a touch event is detected on mobile
-    window.addEventListener('touchstart', function() {
-        swiper.update();
-        swiper1.update();
-    });
-};
+            var swiper2 = new Swiper('.swiper-container3', {
+                direction: 'vertical', // Mengubah arah swipe menjadi vertikal (ke atas dan ke bawah)
+                loop: true, // Membuat swiper loop secara terus-menerus
+                speed: 3000, // Waktu transisi antara slide dalam milidetik (3 detik)
+                autoplay: {
+                    delay: 2000, // Waktu antar swipe otomatis (4 detik)
+                    disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
+                    reverseDirection: true,
+                },
+            });
+            var swiper3 = new Swiper('.swiper-container6', {
+                direction: 'vertical', // Mengubah arah swipe menjadi vertikal
+                loop: true, // Membuat swiper loop secara terus-menerus
+                speed: 3000, // Mengurangi waktu transisi antara slide (1 detik)
+                autoplay: {
+                    delay: 2000, // Mengurangi waktu antar swipe otomatis (3 detik)
+                    disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
+                    reverseDirection: false,
+                },
+            });
 
-    
+            // Update Swiper when a touch event is detected on mobile
+            window.addEventListener('touchstart', function () {
+                swiper.update();
+                swiper1.update();
+            });
+        };
+
+
         // Function to setup image modals
         function setupImageModal(imageId, modalId, modalImageId, isBackgroundImage = false) {
             var element = document.getElementById(imageId);
@@ -575,7 +574,7 @@
             mainImage.src = element.src;
         }
     </script>
-    
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
