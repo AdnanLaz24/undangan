@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Pramez & Fitri</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Mohon tunggu....</div>
+    </div>
+
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="invitation">
+                <h1 class="title">Wedding Invitation</h1>
+                <h2 class="names">Fitri & Pramez</h2>
+                <div class="decoration">
+                    <span class="line"></span>
+                    <span class="rose">❀</span>
+                    <span class="line"></span>
+                </div>
+                <h3 class="subtitle">Kepada Bapak/Ibu/Saudara/i</h3>
+            </div>
+
+            <h1 style="color:#e9b856; font-family: 'Playfair Display', serif;">
+                <div id="namaUndangan"></div>
+            </h1>
+            <button onclick="enterSite()" class="btn">Buka Undangan</button>
+        </div>
+    </div>
+
+    <div class="container" id="main-content" style="display: flex;">
+        <div class="image-container">
+            <div class="text-overlay">
+                <h1>The Wedding Of</h1>
+                <p style="font-size: 100px;">Fitri & Pramez</p>
+                <p style="font-size: 30px;">22 . 09 . 2024</p>
+            </div>
+        </div>
+        <div class="main-container">
+            <video id="invitation-video" autoplay playsinline>
+                <source src="video/video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung audio tag.
+            </video>
+            <div class="content-1">
+                <img src="gambar/logo.png" alt="" style="width: auto; height: 150px;" class="fade-in fade-in-down">
+                <div class="ornament-kanan"></div>
+                <div class="ornament-kiri"></div>
+                <p style="color: #DFB584;
+    font-family: 'Aboreto', Sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 54px;
+    letter-spacing: 0px;"><b>WE FOUND LOVE</b></p>
+                <p class="fade-in fade-in-up">
+                    “Dan diantara tanda-tanda kekuasaanNya ialah Dia menciptakan untukmu isteri-isteri dari jenismu
+                    sendiri, supaya kamu
+                    cenderung dan merasa tenteram kepadanya, dan dijadikanNya diantaramu rasa kasih dan sayang.
+                    Sesungguhnya pada yang
+                    demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.”
+                    <br><br>
+                    (Qs. Ar. Rum (30) : 21)
+                </p>
+
+            </div>
+            <div class="content-2">
+                <h1>Bride & Groom</h1>
+                <p class="fade-in fade-in-up">
+                    Assalamualaikum Wr. Wb.
+                    Dengan memohon Rahmat & Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk
+                    menghadiri acara
+                    pernikahan
+                    putra-putri kami:
+                </p>
+
+                <!-- Container untuk wanita -->
+                <div class="bride-container">
+                    <div class="swiper-containerWanita">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="gambar/DSC08793.jpg" alt="foto pengantin wanita 2" loading="lazy">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="gambar/wanita.jpg" alt="foto pengantin wanita 1" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #661217;
+    font-family: 'Pinyon Script', Sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    margin: 10px;">Fitri</p>
+                    <p id="namaWanita">Syafitriah S.KPm</p>
+                    <p class="fade-in fade-in-up">Putri dari Bapak Safrizal & Ibu Yetri</p>
+                    <div class="fade-in fade-in-up">
+                        <a href="https://www.instagram.com/safitriyahh" style="text-decoration: none; color: #661217;"
+                            target="_blank">
+                            <h4><i class="fa fa-instagram" style="font-size:20px"></i> Instagram Fitri</h4>
+                        </a>
+                    </div>
+
+                </div>
+
+                <br>
+                <img id="con" src="gambar/dan.png" class="fade-in fade-in-pop">
+                <br><br>
+
+                <!-- Container untuk pria -->
+                <div class="groom-container">
+                    <div class="swiper-containerPria">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="gambar/DSC08793.jpg" alt="foto pengantin pria 2" loading="lazy">
+                            </div>
+                             <div class="swiper-slide">
+                                <img src="gambar/pria.jpg" alt="foto pengantin pria 1" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #661217;
+    font-family: 'Pinyon Script', Sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    margin: 10px;">Pramez</p>
+                    <p id="namaPria">Pramez Saldi Sikumbang A.Md. Nautika</p>
+                    <p class="fade-in fade-in-down">Putra dari Bapak Syafrinaldi & Ibu Nurul Baeti</p>
+                    <div class="fade-in fade-in-down"><a href="https://www.instagram.com/pramez_saldi"
+                            style="text-decoration: none; color: #661217;" target="_blank">
+                            <h4><i class="fa fa-instagram" style="font-size:20px"></i> Instagram Pramez</h4>
+                        </a></div>
+
+                </div>
+            </div>
+
+            <div class="content-3">
+                <div class="flower-left"></div>
+                <div class="flower-right"></div>
+                <h1 style="color: #dfb584; font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 30px;">WEDDING EVENT
+                </h1>
+                <center>
+                    <div class="swiper-container3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="gambar/DSC08259.jpg" alt="foto pengantin wanita 1" loading="lazy">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="gambar/DSC08390.jpg" alt="foto pengantin wanita 2" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="container-banner">
+                        <h1 class="fade-in fade-in-pop">AKAD NIKAH</h1>
+                        <h4 class="fade-in fade-in-up">Akan dilaksanakan pada:</h4>
+                        <h2 style="font-family: 'Pinyon Script', Sans-serif; font-size: 50px;">Minggu</h2>
+                        <h2 class="fade-in fade-in-pop">22 September 2024</h2>
+                        <h3 class="fade-in fade-in-down">Pukul 09.00 WIB</h3>
+                        <h4 class="fade-in fade-in-up">Bertempat di:</h4>
+                        <h4 class="fade-in fade-in-down">Komplek GOR Padjajaran No.14
+                            Jl. Pemuda, RT.04/RW.01, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16161.</h4>
+                        <a class="fade-in fade-in-pop" target="_blank" href="https://www.google.com/maps/place/Gedung+Serbaguna+Mila+Kencana/@-6.5782582,106.7947794,17z/data=!4m10!1m2!2m1!1smila+kencana!3m6!1s0x2e69c4370b981281:0x57ffadc61eb8b364!8m2!3d-6.5784331!4d106.7972997!15sCgxtaWxhIGtlbmNhbmGSARFjb252ZW50aW9uX2NlbnRlcuABAA!16s%2Fg%2F11bw2gn7rm?entry=ttu
+"><button>OPEN MAPS</button></a>
+
+                    </div>
+                    <br>
+                    <div class="container-banner">
+                        <h1 class="fade-in fade-in-pop">RESEPSI</h1>
+                        <h4 class="fade-in fade-in-up">Akan dilaksanakan pada:</h4>
+                        <h2 style="font-family: 'Pinyon Script', Sans-serif; font-size: 50px;">Minggu</h2>
+                        <h2 class="fade-in fade-in-pop">22 September 2024</h2>
+                        <h3 class="fade-in fade-in-down">Pukul 11.00 WIB</h3>
+                        <h4 class="fade-in fade-in-up">Bertempat di:</h4>
+                        <h4 class="fade-in fade-in-down">Komplek GOR Padjajaran No.14
+                            Jl. Pemuda, RT.04/RW.01, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16161.</h4>
+                        <a class="fade-in fade-in-pop" target="_blank" href="https://www.google.com/maps/place/Gedung+Serbaguna+Mila+Kencana/@-6.5782582,106.7947794,17z/data=!4m10!1m2!2m1!1smila+kencana!3m6!1s0x2e69c4370b981281:0x57ffadc61eb8b364!8m2!3d-6.5784331!4d106.7972997!15sCgxtaWxhIGtlbmNhbmGSARFjb252ZW50aW9uX2NlbnRlcuABAA!16s%2Fg%2F11bw2gn7rm?entry=ttu
+                        "><button>OPEN MAPS</button></a>
+
+                    </div>
+                    <br>
+                    <div class="container-jam " style="color: #DFB584;">
+                        <div class="countdown">
+                            <div class="time" id="days">00</div>
+                            <div class="label">Hari</div>
+                        </div>
+                        <div class="countdown">
+                            <div class="time" id="hours">00</div>
+                            <div class="label">Jam</div>
+                        </div>
+                        <div class="countdown">
+                            <div class="time" id="minutes">00</div>
+                            <div class="label">Menit</div>
+                        </div>
+                        <div class="countdown">
+                            <div class="time" id="seconds">00</div>
+                            <div class="label">Detik</div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="content-4">
+                <h1 class="fade-in fade-in-left"
+                    style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 60px; margin: 0px; color: white;">Our
+                    Gallery
+                </h1>
+                <br>
+                <div class="main-image">
+                    <img class="fade-in fade-in-pop" id="mainImage" src="gambar/galery/DSC08312.jpg" alt="Main Image">
+                </div>
+                <div id="modal1" class="modal">
+                    <center>
+                        <span class="closed">&times;</span>
+                        <img class="modals-content" id="img01">
+                    </center>
+                </div>
+                <div class="thumbnails-container" loading="lazy">
+                    <div class="thumbnails">
+                        <img class="thumbnail-1 fade-in fade-in-pop" id="thumbnail-1" src="gambar/galery/DSC08381.jpg"
+                            alt="Thumbnail 1" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-2 fade-in fade-in-pop" id="thumbnail-2" src="gambar/galery/DSC08563.jpg"
+                            alt="Thumbnail 2" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-3 fade-in fade-in-pop" id="thumbnail-3" src="gambar/galery/DSC08962.jpg"
+                            alt="Thumbnail 3" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-4 fade-in fade-in-pop" id="thumbnail-4" src="gambar/galery/DSC08603.jpg"
+                            alt="Thumbnail 4" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-5 fade-in fade-in-pop" id="thumbnail-5" src="gambar/galery/DSC08527.jpg"
+                            alt="Thumbnail 5" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-6 fade-in fade-in-pop" id="thumbnail-6" src="gambar/galery/DSC08984.jpg"
+                            alt="Thumbnail 6" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-7 fade-in fade-in-pop" id="thumbnail-7" src="gambar/galery/DSC09260.jpg"
+                            alt="Thumbnail 7" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-8 fade-in fade-in-pop" id="thumbnail-8" src="gambar/galery/DSC09381.jpg"
+                            alt="Thumbnail 8" onclick="changeImage(this)" loading="lazy" style="object-position: left;">
+                        <img class="thumbnail-9 fade-in fade-in-pop" id="thumbnail-9" src="gambar/galery/DSC09399.jpg"
+                            alt="Thumbnail 9" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-10 fade-in fade-in-pop" id="thumbnail-10" src="gambar/galery/DSC09403.jpg"
+                            alt="Thumbnail 10" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-11 fade-in fade-in-pop" id="thumbnail-11" src="gambar/galery/DSC09099.jpg"
+                            alt="Thumbnail 11" onclick="changeImage(this)" loading="lazy">
+                        <img class="thumbnail-12 fade-in fade-in-pop" id="thumbnail-12" src="gambar/galery/DSC09378.jpg"
+                            alt="Thumbnail 12" onclick="changeImage(this)" loading="lazy"
+                            style="object-position: left;">
+                        <!-- Tambahkan thumbnail lainnya di sini -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-5">
+                <div class="container-content">
+                    <h1 class="fade-in fade-in-left" style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 50px;">
+                        WEDDING GIFT</h1>
+                    <h4 class="fade-in fade-in-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan
+                        jika memberi adalah ungkapan
+                        tanda kasih
+                        Anda, Anda dapat memberi kado secara cashless.</h4>
+                    <button class="fade-in fade-in-up" id="openModal">KLIK DI SINI</button>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content fade-in fade-in-pop">
+                        <span class="close">&times;</span>
+                        <h2>Pilih Metode Kado</h2>
+                        <div class="row">
+                            <div class="column left">
+                                <img src="https://i0.wp.com/umsu.ac.id/berita/wp-content/uploads/2024/05/cara-daftar-rekening-bank-bca-dengan-mudah-dan-cepat-2024.jpg?fit=720%2C405&ssl=1"
+                                    alt="" style="max-width: 100px; max-height: 20px;">
+                                <p>Bank BCA</p>
+                                <p>No. Rekening 6821287836</p>
+                                <p>a.n <b>Safitriyah</b></p>
+                                <button
+                                    onclick="copyToClipboard('6821287836', 'Nomor rekening berhasil disalin!')">Salin
+                                    Nomor Rekening BCA</button>
+                            </div>
+                            <div class="column right">
+                                <img src="https://cdn.icon-icons.com/icons2/1558/PNG/512/353414-gift-present_107492.png"
+                                    alt="" style="max-width: 45px; max-height: 40px;">
+                                <p>Kirim Kado</p>
+                                <p>Alamat kirim kado</p>
+                                <p>a.n <b>Safitriyah</b></p>
+                                <button
+                                    onclick="copyToClipboard('Jl.R.Kosasih RT002/RW012 No 39 Cikaret Bogor Selatan (dibelakang sd kotabatu 8 dekat masjid al-mutmainah)', 'Alamat pengiriman berhasil disalin!')">Salin
+                                    Alamat
+                                    Pengiriman</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container-content">
+                    <h1 class="fade-in fade-in-right"
+                        style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 50px;">RSVP</h1>
+                    <h4 class="fade-in fade-in-down">Konfirmasi kehadiran Anda dengan mengisi form berikut :</h4>
+                    <form id="myForm" class="fade-in fade-in-down">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="tamuUndanganInput" name="nama" placeholder="Ketik Nama Anda" required>
+
+                        <label for="jumlah">Jumlah Kehadiran</label>
+                        <select name="jumlah" id="jumlah" required>
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+
+                        <label for="asal">Asal Kota</label>
+                        <input type="text" id="asal" name="asal" placeholder="Ketik Nama Kota Anda" required>
+
+                        <button type="submit">Kirim</button>
+                    </form>
+
+                </div>
+                <div id="notification" style="display: none;">
+
+                </div>
+            </div>
+            <div class="content-6">
+                <div class="flower-left6"></div>
+                <div class="flower-right6"></div>
+                <h1 style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 60px;">LOVE STORY</h1>
+                <h3 class="fade-in fade-in-up">Every Love Story Is Beautiful, But Ours Is My Favorite.</h3>
+                <br>
+                <center>
+                    <div class="swiper-container6">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="gambar/Engagement S&P-307.jpg" alt="foto pengantin wanita 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="gambar/Engagement S&P-272.jpg" alt="foto pengantin wanita 2">
+                            </div>
+                        </div>
+                    </div>
+                </center>
+
+                <br>
+                <h1 style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 50px;">First Meet</h1>
+                <h4 class="fade-in fade-in-down">Awal mula kami berkenalan atas permintaan kedua orang tua kami dan
+                    menjadi langkah awal bagi kami
+                    untuk mengenal lebih
+                    dalam dan memahami satu sama lain.
+                </h4>
+                <h1 style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 50px;">Relationship</h1>
+                <h4 class="fade-in fade-in-down">Setelah berkomunikasi dan menemukan kecocokan, kami akhirnya memutuskan
+                    untuk menjalin sebuah
+                    komitmen.
+                </h4>
+                <h1 style="font-family: 'ZCOOL XiaoWei', Sans-serif; font-size: 50px;">Engagement</h1>
+                <h4 class="fade-in fade-in-down">Setelah hampir satu tahun bersama, akhirnya pada tanggal 7 Juli 2024,
+                    kami memantapkan hati untuk
+                    membawa hubungan ini
+                    ke jenjang yang lebih serius dengan melangkah ke dalam mahligai pernikahan yang sakral.</h4>
+            </div>
+            <div class="content-7">
+                <h5>
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa
+                    restunya untuk
+                    pernikahan kami.
+                </h5>
+                <h5>
+                    Atas do’a & restunya,
+                    kami ucapkan terima kasih.
+                </h5>
+                <h1 id="akhir">FITRI & PRAMEZ</h1>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="musik/Paradise of Minangkabau.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio tag.
+    </audio>
+    <script>
+   window.onload = function() {
+    var swiper = new Swiper('.swiper-containerWanita', {
+        direction: 'horizontal',
+        loop: true, 
+        speed: 3000, 
+        autoplay: {
+            delay: 2000, 
+            disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+        touchEventsTarget: 'container',
+    });
+
+    var swiper1 = new Swiper('.swiper-containerPria', {
+        direction: 'horizontal',
+        loop: true, 
+        speed: 3000, 
+        autoplay: {
+            delay: 2000, 
+            disableOnInteraction: false,
+            reverseDirection: true,
+        },
+        observer: true,
+        observeParents: true,
+        touchEventsTarget: 'container',
+    });
+    
+    var swiper2 = new Swiper('.swiper-container3', {
+            direction: 'vertical', // Mengubah arah swipe menjadi vertikal (ke atas dan ke bawah)
+            loop: true, // Membuat swiper loop secara terus-menerus
+            speed: 3000, // Waktu transisi antara slide dalam milidetik (3 detik)
+            autoplay: {
+                delay: 2000, // Waktu antar swipe otomatis (4 detik)
+                disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
+                reverseDirection: true,
+            },
+        });
+        var swiper3 = new Swiper('.swiper-container6', {
+            direction: 'vertical', // Mengubah arah swipe menjadi vertikal
+            loop: true, // Membuat swiper loop secara terus-menerus
+            speed: 3000, // Mengurangi waktu transisi antara slide (1 detik)
+            autoplay: {
+                delay: 2000, // Mengurangi waktu antar swipe otomatis (3 detik)
+                disableOnInteraction: false, // Autoplay tidak berhenti meskipun ada interaksi
+                reverseDirection: false,
+            },
+        });
+
+    // Update Swiper when a touch event is detected on mobile
+    window.addEventListener('touchstart', function() {
+        swiper.update();
+        swiper1.update();
+    });
+};
+
+    
+        // Function to setup image modals
+        function setupImageModal(imageId, modalId, modalImageId, isBackgroundImage = false) {
+            var element = document.getElementById(imageId);
+            var modal = document.getElementById(modalId);
+            var modalImg = document.getElementById(modalImageId);
+            var span = modal.getElementsByClassName('closed')[0];
+
+            element.onclick = function () {
+                modal.style.display = "block";
+                if (isBackgroundImage) {
+                    // Get the background image URL
+                    var bgImage = window.getComputedStyle(element).backgroundImage;
+                    bgImage = bgImage.slice(5, -2); // Extract the URL from `url("...")`
+                    modalImg.src = bgImage;
+                } else {
+                    modalImg.src = this.src;
+                }
+            }
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        // Setup modals for each image and background image
+        setupImageModal('mainImage', 'modal1', 'img01');
+        setupImageModal('thumbnail-1', 'modal1', 'img01');
+        setupImageModal('thumbnail-2', 'modal1', 'img01');
+        setupImageModal('thumbnail-3', 'modal1', 'img01');
+        setupImageModal('thumbnail-4', 'modal1', 'img01');
+        setupImageModal('thumbnail-5', 'modal1', 'img01');
+        setupImageModal('thumbnail-6', 'modal1', 'img01');
+        setupImageModal('thumbnail-7', 'modal1', 'img01');
+
+        // For background images (isBackgroundImage set to true)
+        setupImageModal('thumbnail-8', 'modal1', 'img01');
+        setupImageModal('thumbnail-9', 'modal1', 'img01');
+        setupImageModal('thumbnail-10', 'modal1', 'img01');
+        setupImageModal('thumbnail-11', 'modal1', 'img01');
+        setupImageModal('thumbnail-12', 'modal1', 'img01');
+
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    console.log(`Observing: ${entry.target.className}`);
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        console.log(`Added visible class to ${entry.target.className}`);
+                        observer.unobserve(entry.target);
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.5 // Ubah threshold sesuai kebutuhan
+            });
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.flower-left6, .flower-right6, .flower-left, .flower-right, .ornament-kanan, .ornament-kiri');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    console.log(entry.target); // Log elemen yang diobservasi
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        console.log('Visible class added to', entry.target.className); // Log saat kelas visible ditambahkan
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+
+
+
+    </script>
+    <script>
+        let currentIndex = 0;
+        const thumbnailWidth = 110; // Lebar thumbnail + margin-right
+        const visibleThumbnails = 5; // Jumlah thumbnail yang terlihat dalam satu waktu
+        const thumbnailsContainer = document.querySelector('.thumbnails');
+        const totalThumbnails = document.querySelectorAll('.thumbnails img').length;
+
+        function slide(direction) {
+            const maxIndex = totalThumbnails - visibleThumbnails;
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+
+            const translateX = -currentIndex * thumbnailWidth;
+            thumbnailsContainer.style.transform = `translateX(${translateX}px)`;
+        }
+
+        function changeImage(element) {
+            var mainImage = document.getElementById("mainImage");
+            mainImage.src = element.src;
+        }
+    </script>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ambil parameter dari URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tamuUndangan = urlParams.get('tamu-undangan');
+
+            // Jika parameter tamu-undangan ada, isi nilai ke dalam input form
+            if (tamuUndangan) {
+                document.getElementById('tamuUndanganInput').value = decodeURIComponent(tamuUndangan);
+                document.getElementById('namaUndangan').innerHTML = decodeURIComponent(tamuUndangan);
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            var loadingScreen = document.getElementById('loading-screen');
+            var splashScreen = document.getElementById('splash-screen');
+            var mainContent = document.getElementById('main-content');
+
+            setTimeout(function () {
+                loadingScreen.style.display = 'none';
+                splashScreen.style.display = 'block';
+                mainContent.style.display = 'none';
+            }, 0); // Mengatur waktu delay agar loading terlihat lebih lama
+        });
+
+
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting the traditional way
+
+            const formData = new FormData(this);
+
+            fetch('https://script.google.com/macros/s/AKfycby4JfdfYg0ClDG_SXHQRkB6FP1EPy-wyFVMl3Csm6WgVTvIOIQLqHr0FN-reOQdt1Ct0Q/exec', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Menampilkan notifikasi SweetAlert setelah form berhasil dikirim
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        text: 'Kehadiran anda telah terkonfirmasi, Terimakasih',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        });
+
+
+        function enterSite() {
+            var splashScreen = document.getElementById('splash-screen');
+            var mainContent = document.getElementById('main-content');
+            var invitationVideo = document.getElementById('invitation-video');
+            var backgroundMusic = document.getElementById('background-music');
+
+            splashScreen.style.transform = 'translateY(100%)';
+            splashScreen.style.opacity = '0';
+            mainContent.style.display = 'flex';
+            setTimeout(function () {
+                splashScreen.style.display = 'none';
+                invitationVideo.play();
+                backgroundMusic.play();
+            }, 1000);
+        }
+
+        function countdown() {
+            const now = new Date().getTime();
+            const eventDate = new Date("September 22, 2024 09:00:00").getTime();
+            const remainingTime = eventDate - now;
+
+            const seconds = Math.floor((remainingTime / 1000) % 60);
+            const minutes = Math.floor((remainingTime / 1000 / 60) % 60);
+            const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+        } setInterval(countdown,
+            1000); </script>
+    <script>
+        // Get modal element
+        var modal = document.getElementById('myModal');
+
+        // Get open modal button
+        var btn = document.getElementById('openModal');
+
+        // Get close button
+        var span = document.getElementsByClassName('close')[0];
+
+        // Listen for open click
+        btn.onclick = function () {
+            modal.style.display = 'flex';
+        }
+
+        // Listen for close click
+        span.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        // Listen for outside click
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(text, message) {
+            var tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Menggunakan SweetAlert sebagai gantinya
+            Swal.fire({
+                title: 'Berhasil!',
+                text: message,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        }
+
+    </script>
+</body>
+
+</html>
